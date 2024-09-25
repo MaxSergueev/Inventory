@@ -19,6 +19,22 @@ protected:
 public:
 	Item(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects);
 
+	//Getters
+	virtual void getName() const;
+
+	void getItemtype() const;
+
+	void getRarity() const;
+
+	void getDescription() const;
+
+	void getValue() const;
+
+	void getWeight() const;
+
+	void getEffects() const;
+
+
 	virtual void use();
 
 	

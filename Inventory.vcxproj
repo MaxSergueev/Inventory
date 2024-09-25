@@ -127,11 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Accessories.cpp" />
+    <ClCompile Include="Armor.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Accessories.h" />
+    <ClInclude Include="Armor.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>

@@ -10,6 +10,37 @@ Item::Item(string name, string itemType, string rarity, string description, int 
     : name(name), itemType(itemType), rarity(rarity), description(description), value(value), weight(weight), effects(effects) {
 }
 
+//Getters
+void Item::getName() const {
+    cout << "This item is called: " << name << endl;
+}
+
+void Item::getItemtype() const {
+    cout << "This item is a: " << itemType << endl;
+}
+
+void Item::getRarity() const {
+    cout << "This is a " << rarity << " item" << endl;
+}
+
+void Item::getDescription() const {
+    cout << description << endl;
+}
+
+void Item::getValue() const {
+    cout << name << " is worth " << value << "coins" << endl;
+}
+
+void Item::getWeight() const {
+    cout << name << " weighs " << weight << "Kgs" << endl;
+}
+
+void Item::getEffects() const {
+    for (auto const& p : effects)
+    {
+        std::cout << p.first << ' ' << p.second << '\n';
+    }
+}
 
 void Item::use() {
     cout << "Using item: " << name << endl;

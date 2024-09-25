@@ -14,8 +14,9 @@ private:
 public:
     Weapon(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, int damage, int range);
 
-    int getDamage() const;
-    int getRange() const;
+    void getName() const override;
+    void getDamage() const;
+    void getRange() const;
 
 
     void use() override;
