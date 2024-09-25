@@ -4,6 +4,8 @@
 #include "Weapon.h"
 #include "Armor.h"
 #include "Accessories.h"
+#include "Potion.h"
+#include "Tool.h"
 
 using namespace std;
 
@@ -25,9 +27,11 @@ int main() {
         {"Healing", 100}
     };
 
+    map<string, int> tooleffects;
+
     Weapon sword(
         "Flame Sword",
-        "Weapon",
+        "Great Sword",
         "Rare",
         "A sword imbued with flames, dealing extra fire damage.",
         2000,
@@ -61,15 +65,89 @@ int main() {
         "Finger"
     );
 
+    Potion healthPotion(
+        "Health Potion",
+        "Buff potion",
+        "common",
+        "A common health potion, though mostly only nobles can afford it.",
+        10,
+        0.1,
+        potionEffects,
+        5,
+        10
+    );
+
+    Tool pickaxe(
+        "Pickaxe",
+        "mining",
+        "common",
+        "a rusted pickaxe, it has seen better days.",
+        5,
+        5.0,
+        tooleffects,
+        3,
+        "mining"
+    );
+
+    //using Item children tests
+    //sword.use();        //weapon
+    //helm.use();         //armor
+    //ring.use();         // accessory
+    //healthPotion.use(); //potion
+    //pickaxe.use(); // tool
+
+ /* sword.getName();
+    sword.getItemtype();
+    sword.getRarity();
+    sword.getDescription();
+    sword.getValue();
+    sword.getWeight();
+    sword.getEffects();
+    sword.getDamage();
+    sword.getRange();*/
+
+   /* helm.getName();
+    helm.getItemtype();
+    helm.getRarity();
+    helm.getDescription();
+    helm.getValue();
+    helm.getWeight();
+    helm.getEffects();
+    helm.getDefense();
+    helm.getSlot();*/
+
+    /*ring.getName();
+    ring.getItemtype();
+    ring.getRarity();
+    ring.getDescription();
+    ring.getValue();
+    ring.getWeight();
+    ring.getEffects();
+    ring.getAlignment();
+    ring.getSlot();*/
+
+    //healthPotion.getName();
+    //healthPotion.getItemtype();
+    //healthPotion.getRarity();
+    //healthPotion.getDescription();
+    //healthPotion.getValue();
+    //healthPotion.getWeight();
+    //healthPotion.getEffects();
+    //healthPotion.getUses();
+    //healthPotion.getEfficiency();
+
+    //pickaxe.getName();
+    //pickaxe.getItemtype();
+    //pickaxe.getRarity();
+    //pickaxe.getDescription();
+    //pickaxe.getValue();
+    //pickaxe.getWeight();
+    //pickaxe.getEffects();
+    //pickaxe.getFunction();
+    //pickaxe.getEfficiency();
 
 
-    //sword.use();
-    //sword.getDamage();
-    //sword.getName();
-    //sword.getEffects();
 
-    helm.use();
-    ring.use();
 
     return 0;
 }

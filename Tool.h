@@ -6,15 +6,15 @@
 using namespace std;
 
 
-class Armor : public Item {
+class Tool : public Item {
 private:
-    int defense;
-    string slot;
+    int efficiency;
+    string function;
 
 public:
-    Armor(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, int defense, string slot);
+    Tool (string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, int efficiency, string function);
 
-    // Inherited Getters
+    //Inherited Getters
     void getName() const override;
     void getItemtype() const override;
     void getRarity() const override;
@@ -23,9 +23,9 @@ public:
     void getWeight() const override;
     void getEffects() const override;
 
-    // Unique Getters
-    void getDefense() const;
-    void getSlot() const;
+    //Unique Getters
+    void getEfficiency() const;
+    void getFunction() const;
 
     void use() override;
 };

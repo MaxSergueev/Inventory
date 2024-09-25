@@ -132,6 +132,7 @@
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Potion.cpp" />
+    <ClCompile Include="Tool.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="Armor.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Potion.h" />
+    <ClInclude Include="Tool.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

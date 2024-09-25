@@ -1,2 +1,4 @@
-﻿  Accessories.cpp
+﻿  Inventory.cpp
+C:\Users\max.sergueev\Documents\GitHub\Inventory\Inventory.cpp(62,9): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\max.sergueev\Documents\GitHub\Inventory\Inventory.cpp(74,9): warning C4305: 'argument': truncation from 'double' to 'float'
   Inventory.vcxproj -> C:\Users\max.sergueev\Documents\GitHub\Inventory\x64\Debug\Inventory.exe

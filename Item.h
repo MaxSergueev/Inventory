@@ -22,19 +22,19 @@ public:
 	//Getters
 	virtual void getName() const;
 
-	void getItemtype() const;
+	virtual void getItemtype() const;
 
-	void getRarity() const;
+	virtual void getRarity() const;
 
-	void getDescription() const;
+	virtual void getDescription() const;
 
-	void getValue() const;
+	virtual void getValue() const;
 
-	void getWeight() const;
+	virtual void getWeight() const;
 
-	void getEffects() const;
+	virtual void getEffects() const;
 
-
+	//Use the Item
 	virtual void use();
 
 	
