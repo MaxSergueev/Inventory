@@ -6,10 +6,13 @@
 #include "Accessories.h"
 #include "Potion.h"
 #include "Tool.h"
+#include "InventorySystem.h"
 
 using namespace std;
 
 int main() {
+
+    InventorySystem inventory;
 
     map<string, int> swordEffects = {
         {"durability", 100}
@@ -146,12 +149,18 @@ int main() {
     //pickaxe.getFunction();
     //pickaxe.getEfficiency();
 
-    sword.use();
-    helm.use();
-    ring.use();
-    healthPotion.use();
-    pickaxe.use();
+    ////sword.use();
+    ////helm.use();
+    ////ring.use();
+    ////healthPotion.use();
+    //pickaxe.use();
 
+    inventory.populateInventory(&sword);
+    inventory.populateInventory(&ring);
+    inventory.populateInventory(&pickaxe);
+    inventory.populateInventory(&helm);
+    inventory.populateInventory(&healthPotion);
+    inventory.printInventory();
 
     return 0;
 }

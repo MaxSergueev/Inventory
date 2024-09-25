@@ -1,24 +1,20 @@
 #include "InventorySystem.h"
 #include "Item.h"
+#include "iostream"
 #include "fstream"
 
-//#include "Weapon.h"
-//#include "Armor.h"
-//#include "Accessories.h"
-//#include "Potion.h"
-//#include "Tool.h"
-void InventorySystem::populateInventory() {
-    ifstream file;
-    file.open("<path of HEAPinput>");
+using namespace std;
 
-    if (!file)
-    {
-        std::cout << "No items.txt file found";
-        exit(0);
-    }
+InventorySystem::InventorySystem(){}
 
-    int i;
-    while (file >> i)
-        //Inventory.push_back(i);
-    file.close();
+void InventorySystem::populateInventory(Item* item){
+
+	inventory.push_back(item);
+}
+
+void InventorySystem::printInventory() {
+	for (size_t i = 0; i < inventory.size(); i++)
+	{
+		inventory[i]->getName();
+	}
 }
