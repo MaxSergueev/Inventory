@@ -27,7 +27,7 @@ int main() {
         {"Healing", 100}
     };
 
-    map<string, int> tooleffects;
+    map<string, int> toolEffects;
 
     Weapon sword(
         "Flame Sword",
@@ -84,7 +84,7 @@ int main() {
         "a rusted pickaxe, it has seen better days.",
         5,
         5.0,
-        tooleffects,
+        toolEffects,
         3,
         "mining"
     );
@@ -146,7 +146,11 @@ int main() {
     //pickaxe.getFunction();
     //pickaxe.getEfficiency();
 
-
+    sword.use();
+    helm.use();
+    ring.use();
+    healthPotion.use();
+    pickaxe.use();
 
 
     return 0;
