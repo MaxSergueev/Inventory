@@ -15,6 +15,7 @@ public:
 	vector <Item*> inventory; //* is to create an address for each child of item, otherwise children wouldn't be able to be stored here since they have different attribute sizes
 	void populateInventory(Item*);
 	void printInventory();
+	void drawInventory();
 
 	//void listItems();
 	//void help();

@@ -5,8 +5,8 @@
 #include "Item.h"
 using namespace std;
 
-Armor::Armor(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, int defense, string slot)
-    : Item(name, itemType, rarity, description, value, weight, effects), defense(defense), slot(slot) {}
+Armor::Armor(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects, int defense, string slot)
+    : Item(name, itemType, imgLocation, description, value, weight, effects), defense(defense), slot(slot) {}
 
 
 // Getters
@@ -16,10 +16,6 @@ void Armor ::getName() const {
 
 void Armor::getItemtype() const {
     cout << "This armor is a " << itemType << "." << endl;
-}
-
-void Armor::getRarity() const {
-    cout << "This armor is " << rarity << "." << endl;
 }
 
 void Armor::getDescription() const {

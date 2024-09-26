@@ -6,8 +6,8 @@
 using namespace std;
 
 
-Item::Item(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects)
-    : name(name), itemType(itemType), rarity(rarity), description(description), value(value), weight(weight), effects(effects) {
+Item::Item(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects)
+    : name(name), itemType(itemType), imgLocation(imgLocation), description(description), value(value), weight(weight), effects(effects) {
 }
 
 //Getters
@@ -19,8 +19,8 @@ void Item::getItemtype() const {
     cout << "This item is a: " << itemType << endl;
 }
 
-void Item::getRarity() const {
-    cout << "This is a " << rarity << " item" << endl;
+void Item::getImgLocation() const {
+    
 }
 
 void Item::getDescription() const {

@@ -1,4 +1,14 @@
-﻿  Inventory.cpp
-C:\Users\max.sergueev\Documents\GitHub\Inventory\Inventory.cpp(65,9): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\max.sergueev\Documents\GitHub\Inventory\Inventory.cpp(77,9): warning C4305: 'argument': truncation from 'double' to 'float'
+﻿  Accessories.cpp
+  Armor.cpp
+  Inventory.cpp
+C:\Users\max.sergueev\Documents\GitHub\Inventory\Inventory.cpp(67,9): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\max.sergueev\Documents\GitHub\Inventory\Inventory.cpp(79,9): warning C4305: 'argument': truncation from 'double' to 'float'
+  InventorySystem.cpp
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(48,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(49,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Item.cpp
+  Potion.cpp
+  Tool.cpp
+  Weapon.cpp
+  Generating Code...
   Inventory.vcxproj -> C:\Users\max.sergueev\Documents\GitHub\Inventory\x64\Debug\Inventory.exe

@@ -5,8 +5,8 @@
 #include "Item.h"
 using namespace std;
 
-Potion::Potion(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, int uses, int efficiency)
-    : Item(name, itemType, rarity, description, value, weight, effects), uses(uses), efficiency(efficiency) {}
+Potion::Potion(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects, int uses, int efficiency)
+    : Item(name, itemType, imgLocation, description, value, weight, effects), uses(uses), efficiency(efficiency) {}
 
 // Getters
 void Potion::getName() const {
@@ -15,10 +15,6 @@ void Potion::getName() const {
 
 void Potion::getItemtype() const {
     cout << "This potion is a " << itemType << "." << endl;
-}
-
-void Potion::getRarity() const {
-    cout << "This potion is " << rarity << "." << endl;
 }
 
 void Potion::getDescription() const {

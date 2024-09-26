@@ -10,21 +10,21 @@ class Item
 protected: 
 	string name;
 	string itemType;
-	string rarity;
+	string imgLocation;
 	string description;
 	int value;
 	float weight;
 	map<string, int> effects;
 
 public:
-	Item(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects);
+	Item(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects);
 
 	//Getters
 	virtual void getName() const;
 
 	virtual void getItemtype() const;
 
-	virtual void getRarity() const;
+    void getImgLocation() const;
 
 	virtual void getDescription() const;
 

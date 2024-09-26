@@ -12,12 +12,11 @@ private:
     string function;
 
 public:
-    Tool (string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, int efficiency, string function);
+    Tool (string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects, int efficiency, string function);
 
     //Inherited Getters
     void getName() const override;
     void getItemtype() const override;
-    void getRarity() const override;
     void getDescription() const override;
     void getValue() const override;
     void getWeight() const override;

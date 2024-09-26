@@ -6,8 +6,8 @@
 
 using namespace std;
 
-Tool::Tool(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, int efficiency, string function)
-    : Item(name, itemType, rarity, description, value, weight, effects), efficiency(efficiency), function(function) {}
+Tool::Tool(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects, int efficiency, string function)
+    : Item(name, itemType, imgLocation, description, value, weight, effects), efficiency(efficiency), function(function) {}
 
 // Getters
 void Tool::getName() const {
@@ -16,10 +16,6 @@ void Tool::getName() const {
 
 void Tool::getItemtype() const {
     cout << "This is a " << itemType << " tool." << endl;
-}
-
-void Tool::getRarity() const {
-    cout << "This tool is " << rarity << "." << endl;
 }
 
 void Tool::getDescription() const {

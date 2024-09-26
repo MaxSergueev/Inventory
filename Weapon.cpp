@@ -5,8 +5,8 @@
 #include "Item.h"
 using namespace std;
 
-Weapon::Weapon(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, int damage, int range)
-    : Item(name, itemType, rarity, description, value, weight, effects), damage(damage), range(range) {}
+Weapon::Weapon(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects, int damage, int range)
+    : Item(name, itemType, imgLocation, description, value, weight, effects), damage(damage), range(range) {}
 
 
 // Getters
@@ -16,10 +16,6 @@ void Weapon::getName() const {
 
 void Weapon::getItemtype() const {
     cout << "This weapon is a " << itemType << "." << endl;
-}
-
-void Weapon::getRarity() const {
-    cout << "This weapon is " << rarity << "." << endl;
 }
 
 void Weapon::getDescription() const {

@@ -12,12 +12,11 @@ private:
     string slot;
 
 public:
-    Accessories(string name, string itemType, string rarity, string description, int value, float weight, map<string, int> effects, string alignment , string slot);
+    Accessories(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects, string alignment , string slot);
 
     // Inherited Getters
     void getName() const override;
     void getItemtype() const override;
-    void getRarity() const override;
     void getDescription() const override;
     void getValue() const override;
     void getWeight() const override;

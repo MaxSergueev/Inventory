@@ -7,12 +7,14 @@
 #include "Potion.h"
 #include "Tool.h"
 #include "InventorySystem.h"
+#include "raylib.h"
 
 using namespace std;
 
 int main() {
 
     InventorySystem inventory;
+    inventory.drawInventory();
 
     map<string, int> swordEffects = {
         {"durability", 100}
