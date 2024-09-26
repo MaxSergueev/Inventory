@@ -1,10 +1,6 @@
 ﻿  InventorySystem.cpp
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(57,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(58,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(65,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(65,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(80,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(81,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(96,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(96,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(63,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(64,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(77,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(77,54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Inventory.vcxproj -> C:\Users\max.sergueev\Documents\GitHub\Inventory\x64\Debug\Inventory.exe

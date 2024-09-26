@@ -44,22 +44,11 @@ void InventorySystem::drawInventory() {
 
         vector <Texture2D> textures;
 
-        for (int row = 0; row < rows; row++)
+        for (int i = 0; i < inventory.size(); i++)
         {
-            for (int col = 0; col < cols; col++)
-            {
-                float posX = startX + col * (rectWidth + padding);
-                float posY = startY + row * (rectHeight + padding);
-                int index = row * cols + col;
+            const char* c = imageLocations[i].c_str();
+            textures.push_back(LoadTexture(c));
 
-                // load texture
-                if (index < inventory.size()) {
-                    const char* c = imageLocations[index].c_str();
-                    Texture2D texture = LoadTexture(c);
-                    DrawTexture(texture, posX, posY, WHITE);
-                }
-
-            }
         }
 
         while (!WindowShouldClose())
@@ -85,9 +74,7 @@ void InventorySystem::drawInventory() {
 
                     // Draw the texture if there's an item in this slot
                     if (index < inventory.size()) {
-                        const char* c = imageLocations[index].c_str();
-                        Texture2D texture = LoadTexture(c);
-                        DrawTexture(texture, posX, posY, WHITE);
+                        DrawTexture(textures[index], posX, posY, WHITE);
                     }
 
                 }
