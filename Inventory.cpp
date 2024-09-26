@@ -8,14 +8,14 @@
 #include "Tool.h"
 #include "InventorySystem.h"
 #include "raylib.h"
+#include "vector"
+#include "string"
 
 using namespace std;
 
 int main() {
 
-    InventorySystem inventory;
-    inventory.drawInventory();
-
+    //Texture2D swordImage = LoadTexture("Images/Weapon & Tool/Silver Sword.png");
     map<string, int> swordEffects = {
         {"durability", 100}
     };
@@ -37,7 +37,7 @@ int main() {
     Weapon sword(
         "Flame Sword",
         "Great Sword",
-        "Rare",
+        "Images/Weapon & Tool/Silver Sword.png",
         "A sword imbued with flames, dealing extra fire damage.",
         2000,
         5.0,
@@ -49,7 +49,7 @@ int main() {
     Armor helm(
         "Odins Helm",
         "Helm",
-        "Legendary",
+        "Images/Weapon & Tool/Silver Sword.png",
         "legend has it that Odin himself once wore this helm.",
         5000,
         5.0,
@@ -61,7 +61,7 @@ int main() {
     Accessories ring(
         "Speed ring",
         "Ring",
-        "Epic",
+        "Images/Weapon & Tool/Silver Sword.png",
         "A ring worn by ancient thieves who worshipped a forgotten trickster god.",
         300,
         0.3,
@@ -73,7 +73,7 @@ int main() {
     Potion healthPotion(
         "Health Potion",
         "Buff potion",
-        "common",
+        "Images/Weapon & Tool/Silver Sword.png",
         "A common health potion, though mostly only nobles can afford it.",
         10,
         0.1,
@@ -85,7 +85,7 @@ int main() {
     Tool pickaxe(
         "Pickaxe",
         "mining",
-        "common",
+        "Images/Weapon & Tool/Silver Sword.png",
         "a rusted pickaxe, it has seen better days.",
         5,
         5.0,
@@ -94,75 +94,21 @@ int main() {
         "mining"
     );
 
-    //using Item children tests
-    //sword.use();        //weapon
-    //helm.use();         //armor
-    //ring.use();         // accessory
-    //healthPotion.use(); //potion
-    //pickaxe.use(); // tool
+    //inventory.populateInventory(pickaxe);
+    //inventory.printInventory();
+    //inventory.drawInventory();
 
- /* sword.getName();
-    sword.getItemtype();
-    sword.getRarity();
-    sword.getDescription();
-    sword.getValue();
-    sword.getWeight();
-    sword.getEffects();
-    sword.getDamage();
-    sword.getRange();*/
+    InventorySystem inventory;
 
-   /* helm.getName();
-    helm.getItemtype();
-    helm.getRarity();
-    helm.getDescription();
-    helm.getValue();
-    helm.getWeight();
-    helm.getEffects();
-    helm.getDefense();
-    helm.getSlot();*/
-
-    /*ring.getName();
-    ring.getItemtype();
-    ring.getRarity();
-    ring.getDescription();
-    ring.getValue();
-    ring.getWeight();
-    ring.getEffects();
-    ring.getAlignment();
-    ring.getSlot();*/
-
-    //healthPotion.getName();
-    //healthPotion.getItemtype();
-    //healthPotion.getRarity();
-    //healthPotion.getDescription();
-    //healthPotion.getValue();
-    //healthPotion.getWeight();
-    //healthPotion.getEffects();
-    //healthPotion.getUses();
-    //healthPotion.getEfficiency();
-
-    //pickaxe.getName();
-    //pickaxe.getItemtype();
-    //pickaxe.getRarity();
-    //pickaxe.getDescription();
-    //pickaxe.getValue();
-    //pickaxe.getWeight();
-    //pickaxe.getEffects();
-    //pickaxe.getFunction();
-    //pickaxe.getEfficiency();
-
-    ////sword.use();
-    ////helm.use();
-    ////ring.use();
-    ////healthPotion.use();
-    //pickaxe.use();
-
+    //Push image links into a vector here
     inventory.populateInventory(&sword);
-    inventory.populateInventory(&ring);
-    inventory.populateInventory(&pickaxe);
-    inventory.populateInventory(&helm);
     inventory.populateInventory(&healthPotion);
+    inventory.populateInventory(&helm);
+    inventory.populateInventory(&pickaxe);
+    inventory.populateInventory(&ring);
+
     inventory.printInventory();
+    inventory.drawInventory();
 
     return 0;
 }

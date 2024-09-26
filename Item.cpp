@@ -19,8 +19,8 @@ void Item::getItemtype() const {
     cout << "This item is a: " << itemType << endl;
 }
 
-void Item::getImgLocation() const {
-    
+string Item::getImgLocation() const {
+    return imgLocation;
 }
 
 void Item::getDescription() const {

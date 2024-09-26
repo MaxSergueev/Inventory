@@ -1,14 +1,10 @@
-﻿  Accessories.cpp
-  Armor.cpp
-  Inventory.cpp
-C:\Users\max.sergueev\Documents\GitHub\Inventory\Inventory.cpp(67,9): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\max.sergueev\Documents\GitHub\Inventory\Inventory.cpp(79,9): warning C4305: 'argument': truncation from 'double' to 'float'
-  InventorySystem.cpp
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(48,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(49,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  Item.cpp
-  Potion.cpp
-  Tool.cpp
-  Weapon.cpp
-  Generating Code...
+﻿  InventorySystem.cpp
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(57,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(58,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(65,48): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(65,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(80,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(81,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(96,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(96,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Inventory.vcxproj -> C:\Users\max.sergueev\Documents\GitHub\Inventory\x64\Debug\Inventory.exe

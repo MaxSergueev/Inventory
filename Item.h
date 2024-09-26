@@ -2,6 +2,7 @@
 #include "iostream"
 #include "string"
 #include "map"
+#include "raylib.h"
 
 using namespace std;
 
@@ -24,7 +25,7 @@ public:
 
 	virtual void getItemtype() const;
 
-    void getImgLocation() const;
+    string getImgLocation() const;
 
 	virtual void getDescription() const;
 
