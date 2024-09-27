@@ -9,48 +9,43 @@ Potion::Potion(string name, string itemType, string imgLocation, string descript
     : Item(name, itemType, imgLocation, description, value, weight, effects), uses(uses), efficiency(efficiency) {}
 
 // Getters
-void Potion::getName() const {
-    cout << "this potion is named: " << name << endl;
+string Potion::getName() const {
+    return "this potion is named: " + name;
 }
 
-void Potion::getItemtype() const {
-    cout << "This potion is a " << itemType << "." << endl;
+string Potion::getItemtype() const {
+    return "This potion is a " + itemType;
+
 }
 
-void Potion::getDescription() const {
-    cout << "Item description: " << description << endl;
-}
-
-void Potion::getValue() const {
-    cout << "This potion is worth " << value << " coins." << endl;
-}
-
-void Potion::getWeight() const {
-    cout << "This potion weighs " << weight << " Kgs." << endl;
-}
-
-void Potion::getEffects() const {
-    cout << name << " has the following effects: " << endl;
+map<string, int> Potion::getEffects() const {
+    /*cout << name << " has the following effects: " << endl;
     for (auto const& p : effects)
     {
         cout << p.first << " " << p.second << '\n';
-    }
+    }*/
+    return effects;
 }
 
-void Potion::getUses() const {
-    cout << name << " has " << uses << " uses left." << endl;
+int Potion::getUses() const {
+    //cout << name << " has " << uses << " uses left." << endl;
+
+    return uses;
 }
 
-void Potion::getEfficiency() const {
-    cout << name << " deals " << efficiency << " points per second per when used." << endl;
+int Potion::getEfficiency() const {
+    //cout << name << " deals " << efficiency << " points per second per when used." << endl;
+
+    return efficiency;
 }
 
-void Potion::use() {
-    uses -= 1;
+string Potion::use() {
+    /*uses -= 1;
     cout << "Drank " << name << ". " << uses - 1 << " uses left." << endl;
     for (auto const& p : effects)
     {
         std::cout << p.first << " for " << p.second << " seconds. " << efficiency << " points per second." << '\n';
-    }
+    }*/
+    return "Drank " + name;
 
 }

@@ -49,7 +49,7 @@ int main() {
     Armor helm(
         "Odins Helm",
         "Helm",
-        "Images/Weapon & Tool/Silver Sword.png",
+        "Images/Equipment/Helm.png",
         "legend has it that Odin himself once wore this helm.",
         5000,
         5.0,
@@ -61,7 +61,7 @@ int main() {
     Accessories ring(
         "Speed ring",
         "Ring",
-        "Images/Weapon & Tool/Silver Sword.png",
+        "Images/Ore & Gem/Pearl.png",
         "A ring worn by ancient thieves who worshipped a forgotten trickster god.",
         300,
         0.3,
@@ -73,7 +73,7 @@ int main() {
     Potion healthPotion(
         "Health Potion",
         "Buff potion",
-        "Images/Weapon & Tool/Silver Sword.png",
+        "Images/Potion/Red Potion 2.png",
         "A common health potion, though mostly only nobles can afford it.",
         10,
         0.1,
@@ -85,7 +85,7 @@ int main() {
     Tool pickaxe(
         "Pickaxe",
         "mining",
-        "Images/Weapon & Tool/Silver Sword.png",
+        "Images/Weapon & Tool/Pickaxe.png",
         "a rusted pickaxe, it has seen better days.",
         5,
         5.0,

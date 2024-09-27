@@ -11,37 +11,38 @@ Item::Item(string name, string itemType, string imgLocation, string description,
 }
 
 //Getters
-void Item::getName() const {
-    cout << "This item is called: " << name << endl;
+string Item::getName() const {
+    return "this item is named: " + name;
 }
 
-void Item::getItemtype() const {
-    cout << "This item is a: " << itemType << endl;
+string Item::getItemtype() const {
+    return "this item is a: " + itemType;
 }
 
 string Item::getImgLocation() const {
     return imgLocation;
 }
 
-void Item::getDescription() const {
-    cout << description << endl;
+string Item::getDescription() const {
+    return "Item description: " + description;
 }
 
-void Item::getValue() const {
-    cout << name << " is worth " << value << "coins" << endl;
+int Item::getValue() const {
+    return value;
 }
 
-void Item::getWeight() const {
-    cout << name << " weighs " << weight << "Kgs" << endl;
+float Item::getWeight() const {
+    return weight;
 }
 
-void Item::getEffects() const {
-    for (auto const& p : effects)
+map<string, int> Item::getEffects() const {
+    /*for (auto const& p : effects)
     {
         std::cout << p.first << ' ' << p.second << '\n';
-    }
+    }*/
+    return effects;
 }
 
-void Item::use() {
-    cout << "Using item: " << name << endl;
+string Item::use() {
+    return "Using item: " + name;
 }

@@ -3,6 +3,7 @@
 #include "iostream"
 #include "fstream"
 #include "raylib.h"
+#include <sstream>
 
 using namespace std;
 
@@ -44,6 +45,17 @@ void InventorySystem::drawInventory() {
 
         vector <Texture2D> textures;
 
+        Font fonts[8] = { 0 };
+
+        fonts[0] = LoadFont("resources/fonts/alagard.png");
+        fonts[1] = LoadFont("resources/fonts/pixelplay.png");
+        fonts[2] = LoadFont("resources/fonts/mecha.png");
+        fonts[3] = LoadFont("resources/fonts/setback.png");
+        fonts[4] = LoadFont("resources/fonts/romulus.png");
+        fonts[5] = LoadFont("resources/fonts/pixantiqua.png");
+        fonts[6] = LoadFont("resources/fonts/alpha_beta.png");
+        fonts[7] = LoadFont("resources/fonts/jupiter_crash.png");
+
         for (int i = 0; i < inventory.size(); i++)
         {
             const char* c = imageLocations[i].c_str();
@@ -56,6 +68,15 @@ void InventorySystem::drawInventory() {
             BeginDrawing();
             ClearBackground(RAYWHITE);
 
+            //Large rectangle to show selected item info
+            DrawRectangleRounded(
+                Rectangle{ 450, 120, 500, 400 },
+                roundness,
+                segments,
+                rectColor
+            );
+
+            //For loop to draw empty slots, then "fill" them with an item image if there is an item
             for (int row = 0; row < rows; row++)
             {
                 for (int col = 0; col < cols; col++)
@@ -74,20 +95,50 @@ void InventorySystem::drawInventory() {
 
                     // Draw the texture if there's an item in this slot
                     if (index < inventory.size()) {
-                        DrawTexture(textures[index], posX, posY, WHITE);
+                        DrawTexture(textures[index], posX + 8, posY + 10, WHITE);
                     }
+
+                    //Check if mouse is inside of a square with an item, print item info
+                    if (CheckCollisionPointRec(GetMousePosition(), Rectangle{ posX, posY, rectWidth, rectHeight }) && index < inventory.size())
+                    {
+                        //cout << index << endl; //DEBUG MSG
+                        DrawTextureEx(textures[index], {650, 130}, 0, 3, WHITE);
+
+                        //Show item's name
+                        string name = inventory[index]->getName();
+                        const char* cn = name.c_str();
+                        DrawTextEx(fonts[0], cn, {455, 250}, 20, 1, RED);
+
+                        //Show item's type
+                        string type = inventory[index]->getItemtype();
+                        const char* ci = type.c_str();
+                        DrawTextEx(fonts[0], ci, { 455, 275 }, 20, 1, RED);
+
+                        //Show item's value
+                        string value = "Worth " + to_string(inventory[index]->getValue()) + " gold coins";
+                        const char* cv = value.c_str();
+                        DrawTextEx(fonts[0], cv, { 455, 300 }, 20, 1, RED);
+
+                        //Show item's weight
+                        ostringstream oss;
+                        oss.precision(2);  // Set the precision to 2 decimal places
+                        oss << fixed << inventory[index]->getWeight();  // Convert float to string with fixed precision
+                        string weight = "Weighs " + oss.str() + " Kgs";
+                        const char* cw = weight.c_str();
+                        DrawTextEx(fonts[0], cw, { 455, 325 }, 20, 1, RED);
+
+                    }
+
 
                 }
             }
 
-            DrawRectangleRounded(
-                Rectangle{ 450, 120, 500, 400 },
-                roundness,
-                segments,
-                rectColor
-            );
-
             EndDrawing();
+        }
+
+        for (int i = 0; i < inventory.size(); i++)
+        {
+            UnloadTexture(textures[i]);
         }
 
         CloseWindow();

@@ -10,43 +10,32 @@ Weapon::Weapon(string name, string itemType, string imgLocation, string descript
 
 
 // Getters
-void Weapon::getName() const {
-    cout << "this weapon is named: " << name << endl;
+string Weapon::getName() const {
+    return "this weapon is named: " + name;
 }
 
-void Weapon::getItemtype() const {
-    cout << "This weapon is a " << itemType << "." << endl;
+string Weapon::getItemtype() const {
+    return "this weapon is a " + itemType;
 }
 
-void Weapon::getDescription() const {
-    cout << "Item description: " << description << endl;
+map<string, int> Weapon::getEffects() const {
+    //cout << name << " has the following effects: " << endl;
+    //for (auto const& p : effects)
+    //{
+    //    cout << p.first << " " << p.second << '\n';
+    //}
+    return effects;
 }
 
-void Weapon::getValue() const {
-    cout << "This weapon is worth " << value << " coins." << endl;
+int Weapon::getDamage() const {
+    return damage;
 }
 
-void Weapon::getWeight() const {
-    cout << "This weapon weighs " << weight << " Kgs." << endl;
-}
-
-void Weapon::getEffects() const {
-    cout << name << " has the following effects: " << endl;
-    for (auto const& p : effects)
-    {
-        cout << p.first << " " << p.second << '\n';
-    }
-}
-
-void Weapon::getDamage() const {
-    cout << name << " does " << damage << " damage." << endl;
-}
-
-void Weapon::getRange() const {
-    cout << name << " has a range of " << range << endl;
+int Weapon::getRange() const {
+    return range;
 }
 
 // Use the weapon
-void Weapon::use() {
-    cout << "Swinging weapon: " << name << " with damage: " << damage << " and range: " << range << endl;
+string Weapon::use() {
+    return "Swinging weapon: " + name + " with damage: " + to_string(damage) + " and range: " + to_string(range);
 }

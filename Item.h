@@ -21,22 +21,22 @@ public:
 	Item(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects);
 
 	//Getters
-	virtual void getName() const;
+	virtual string getName() const;
 
-	virtual void getItemtype() const;
+	virtual string getItemtype() const;
 
     string getImgLocation() const;
 
-	virtual void getDescription() const;
+	string getDescription() const;
 
-	virtual void getValue() const;
+	int getValue() const;
 
-	virtual void getWeight() const;
+	float getWeight() const;
 
-	virtual void getEffects() const;
+	virtual map<string, int> getEffects() const;
 
 	//Use the Item
-	virtual void use();
+	virtual string use();
 
 	
 

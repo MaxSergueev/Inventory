@@ -10,48 +10,34 @@ Armor::Armor(string name, string itemType, string imgLocation, string descriptio
 
 
 // Getters
-void Armor ::getName() const {
-    cout << "this armor is named: " << name << endl;
+string Armor ::getName() const {
+    return "this armor is named: " + name;
 }
 
-void Armor::getItemtype() const {
-    cout << "This armor is a " << itemType << "." << endl;
+string Armor::getItemtype() const {
+    return "This armor is a " + itemType + ".";
 }
 
-void Armor::getDescription() const {
-    cout << "Item description: " << description << endl;
-}
-
-void Armor::getValue() const {
-    cout << "This armor is worth " << value << " coins." << endl;
-}
-
-void Armor::getWeight() const {
-    cout << "This armor weighs " << weight << " Kgs." << endl;
-}
-
-void Armor::getEffects() const {
-    cout << name << " has the following effects: " << endl;
+map<string, int> Armor::getEffects() const {
+    /*cout << name << " has the following effects: " << endl;
     for (auto const& p : effects)
     {
         cout << p.first << " " << p.second << '\n';
-    }
+    }*/
+    return effects;
 }
 
-void Armor::getDefense() const {
+int Armor::getDefense() const {
     cout << "This armor has a physical resistance of " << defense << "." << endl;
+    return defense;
 }
 
-void Armor::getSlot()const {
-    cout << "This armor is worn in the " << slot << " slot." << endl;
+string Armor::getSlot()const {
+    return "This armor is worn in the " + slot + " slot.";
 }
 
 // Use the armor
-void Armor::use() {
-    cout << "Equipped " << name << " to " << slot << " slot. " << "Granting " << defense << " Physical defense, as well as: " << endl;
-    for (auto const& p : effects)
-    {
-        std::cout << p.first << " resistance " << p.second << '\n';
-    }
+string Armor::use() {
+    return "Equipped " + name + " to " + slot + " slot. " + "Granting " + to_string(defense) + ".";
 
 }

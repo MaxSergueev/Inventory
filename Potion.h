@@ -15,17 +15,14 @@ public:
     Potion(string name, string itemType, string imgLocation, string description, int value, float weight, map<string, int> effects, int uses, int efficiency);
 
     //Inherited Getters
-    void getName() const override;
-    void getItemtype() const override;
-    void getDescription() const override;
-    void getValue() const override;
-    void getWeight() const override;
-    void getEffects() const override;
+    string getName() const override;
+    string getItemtype() const override;
+    map<string, int> getEffects() const override;
 
     //Unique Getters
-    void getUses() const;
-    void getEfficiency() const;
+    int getUses() const;
+    int getEfficiency() const;
 
-    void use() override;
+    string use() override;
 };
 

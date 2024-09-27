@@ -10,42 +10,32 @@ Tool::Tool(string name, string itemType, string imgLocation, string description,
     : Item(name, itemType, imgLocation, description, value, weight, effects), efficiency(efficiency), function(function) {}
 
 // Getters
-void Tool::getName() const {
-    cout << "this tool is named: " << name << endl;
+string Tool::getName() const {
+    return "this tool is named: " + name;
 }
 
-void Tool::getItemtype() const {
-    cout << "This is a " << itemType << " tool." << endl;
+string Tool::getItemtype() const {
+    return "this is a " + itemType + " tool.";
 }
 
-void Tool::getDescription() const {
-    cout << "Item description: " << description << endl;
+map<string, int> Tool::getEffects() const {
+    //cout << name << " has the following effects: " << endl;
+    //for (auto const& p : effects)
+    //{
+    //    cout << p.first << " " << p.second << '\n';
+    //}
+
+    return effects;
 }
 
-void Tool::getValue() const {
-    cout << "This tool is worth " << value << " coins." << endl;
+int Tool::getEfficiency() const{
+    return efficiency;
 }
 
-void Tool::getWeight() const {
-    cout << "This tool weighs " << weight << " Kgs." << endl;
+string Tool::getFunction() const {
+    return name + " is used for " + function;
 }
 
-void Tool::getEffects() const {
-    cout << name << " has the following effects: " << endl;
-    for (auto const& p : effects)
-    {
-        cout << p.first << " " << p.second << '\n';
-    }
-}
-
-void Tool::getEfficiency() const{
-    cout << name << " has an efficiency of " << efficiency << endl;
-}
-
-void Tool::getFunction() const {
-    cout << name << " is used for " << function << endl;
-}
-
-void Tool::use() {
-    cout << "You used your " << name << " to " << function << ". " << "Its efficiency is " << efficiency << endl;
+string Tool::use() {
+    return "You used your " + name + " to " + function + ". It's efficiency is" + to_string(efficiency);
 }
