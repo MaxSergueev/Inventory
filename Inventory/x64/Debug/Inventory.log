@@ -1,6 +1,6 @@
 ﻿  InventorySystem.cpp
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(85,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(86,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(87,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(100,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(100,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(99,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\max.sergueev\Documents\GitHub\Inventory\InventorySystem.cpp(99,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Inventory.vcxproj -> C:\Users\max.sergueev\Documents\GitHub\Inventory\x64\Debug\Inventory.exe

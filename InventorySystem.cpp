@@ -30,7 +30,6 @@ void InventorySystem::printInventory() {
 void InventorySystem::drawInventory() {
 
         InitWindow(1000, 600, "inventory");
-        //Load every texture here
 
         const int rows = 5;
         const int cols = 5;
@@ -109,36 +108,40 @@ void InventorySystem::drawInventory() {
                         //Show item's name
                         string name = inventory[index]->getName();
                         const char* cn = name.c_str();
-                        DrawTextEx(fonts[0], cn, {455, 250}, 20, 1, RED);
+                        DrawTextEx(fonts[0], cn, {455, 250}, 20, 1, WHITE);
 
                         //Show item's type
                         string type = inventory[index]->getItemtype();
                         const char* ci = type.c_str();
-                        DrawTextEx(fonts[0], ci, { 455, 275 }, 20, 1, RED);
+                        DrawTextEx(fonts[0], ci, { 455, 275 }, 20, 1, WHITE);
 
                         //Show item's value
                         string value = "Worth " + to_string(inventory[index]->getValue()) + " gold coins";
                         const char* cv = value.c_str();
-                        DrawTextEx(fonts[0], cv, { 455, 300 }, 20, 1, RED);
+                        DrawTextEx(fonts[0], cv, { 455, 300 }, 20, 1, WHITE);
 
                         //Show item's weight
                         ostringstream oss;
-                        oss.precision(2);  // Set the precision to 2 decimal places
-                        oss << fixed << inventory[index]->getWeight();  // Convert float to string with fixed precision
+                        oss.precision(2);
+                        oss << fixed << inventory[index]->getWeight();
                         string weight = "Weighs " + oss.str() + " Kgs";
                         const char* cw = weight.c_str();
-                        DrawTextEx(fonts[0], cw, { 455, 325 }, 20, 1, RED);
+                        DrawTextEx(fonts[0], cw, { 455, 325 }, 20, 1, WHITE);
 
                         //Show item's description
                         string description = inventory[index]->getDescription();
                         const char* cd = description.c_str();
-                        DrawTextEx(fonts[0], cd, { 455, 350 }, 10, 1, RED);
+                        DrawTextEx(fonts[0], cd, { 455, 350 }, 10, 1, WHITE);
 
-                        //Show item's description
+                        //If left mouse button is held, show using the item.
+                        string used = inventory[index]->use();
+                        if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) {
+                            const char* cu = used.c_str();
+                            DrawTextEx(fonts[0], cu, { 30, 30 }, 20, 1, rectColor);
+                        }
 
 
                     }
-
 
                 }
             }
