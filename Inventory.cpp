@@ -94,20 +94,17 @@ int main() {
         "mining"
     );
 
-    //inventory.populateInventory(pickaxe);
-    //inventory.printInventory();
-    //inventory.drawInventory();
-
+    //Initiate InventorySysten
     InventorySystem inventory;
 
-    //Push image links into a vector here
+    //Push items into inventory
     inventory.populateInventory(&sword);
     inventory.populateInventory(&healthPotion);
     inventory.populateInventory(&helm);
     inventory.populateInventory(&pickaxe);
     inventory.populateInventory(&ring);
 
-    inventory.printInventory();
+    //inventory.printInventory(); //For debugging
     inventory.drawInventory();
 
     return 0;

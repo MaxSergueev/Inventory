@@ -36,10 +36,7 @@ float Item::getWeight() const {
 }
 
 map<string, int> Item::getEffects() const {
-    /*for (auto const& p : effects)
-    {
-        std::cout << p.first << ' ' << p.second << '\n';
-    }*/
+    
     return effects;
 }
 

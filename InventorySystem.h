@@ -21,6 +21,7 @@ public:
 	void printInventory();
 	void drawInventory();
 
+
 	//void listItems();
 	//void help();
 	//void initialMessage();

@@ -4,6 +4,8 @@
 #include "fstream"
 #include "raylib.h"
 #include <sstream>
+#include "map"
+#include "string"
 
 using namespace std;
 
@@ -126,6 +128,14 @@ void InventorySystem::drawInventory() {
                         string weight = "Weighs " + oss.str() + " Kgs";
                         const char* cw = weight.c_str();
                         DrawTextEx(fonts[0], cw, { 455, 325 }, 20, 1, RED);
+
+                        //Show item's description
+                        string description = inventory[index]->getDescription();
+                        const char* cd = description.c_str();
+                        DrawTextEx(fonts[0], cd, { 455, 350 }, 10, 1, RED);
+
+                        //Show item's description
+
 
                     }
 
