@@ -41,3 +41,7 @@ string Armor::use() {
     return "Equipped " + name + " to " + slot + " slot. " + "Granting " + to_string(defense) + ".";
 
 }
+
+string Armor::getAttributes() {
+    return "This armor's physical defense is " + to_string(defense) + " and it is equipped in the " + slot + " slot";
+}

@@ -24,4 +24,6 @@ public:
     string getSlot() const;
 
     string use() override;
+
+    string getAttributes() override;
 };

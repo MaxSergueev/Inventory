@@ -38,6 +38,9 @@ public:
 	//Use the Item
 	virtual string use();
 
+	//Pure virtual function for unique attributes
+	virtual string getAttributes() = 0;
+
 	
 
 

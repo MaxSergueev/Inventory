@@ -24,5 +24,7 @@ public:
     string getFunction() const;
 
     string use() override;
+
+    string getAttributes() override;
 };
 

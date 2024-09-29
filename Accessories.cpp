@@ -38,3 +38,7 @@ string Accessories::getSlot() const {
 string Accessories::use() {
     return "Equipped: " + name + " to " + slot + " slot. Changing your alignment towards the " + alignment; // can maybe add effects list
 }
+
+string Accessories::getAttributes() {
+    return "Worn in the " + slot + " slot, changing your alignment to the " + alignment;
+}

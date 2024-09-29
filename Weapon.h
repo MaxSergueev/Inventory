@@ -24,5 +24,6 @@ public:
     int getRange() const;
 
     string use() override;
-};
 
+    string getAttributes() override;
+};

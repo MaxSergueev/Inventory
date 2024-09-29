@@ -37,5 +37,9 @@ int Weapon::getRange() const {
 
 // Use the weapon
 string Weapon::use() {
-    return "Swinging weapon: " + name + " with damage: " + to_string(damage) + " and range: " + to_string(range);
+    return "Swinging weapon " + name + " dealing " + to_string(damage) + " damage at a range of " + to_string(range);
+}
+
+string Weapon::getAttributes() {
+    return "This weapons damage is " + to_string(damage) + " and its range is " + to_string(range);
 }

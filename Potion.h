@@ -24,5 +24,7 @@ public:
     int getEfficiency() const;
 
     string use() override;
+
+    string getAttributes() override;
 };
 

@@ -39,3 +39,7 @@ string Tool::getFunction() const {
 string Tool::use() {
     return "You used your " + name + " to " + function + ". It's efficiency is" + to_string(efficiency);
 }
+
+string Tool::getAttributes() {
+    return "This tool is for " + function + ". It's efficiency is " + to_string(efficiency);
+}

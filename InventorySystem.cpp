@@ -46,16 +46,9 @@ void InventorySystem::drawInventory() {
 
         vector <Texture2D> textures;
 
-        Font fonts[8] = { 0 };
+        Font fonts[1] = { 0 };
 
         fonts[0] = LoadFont("resources/fonts/alagard.png");
-        fonts[1] = LoadFont("resources/fonts/pixelplay.png");
-        fonts[2] = LoadFont("resources/fonts/mecha.png");
-        fonts[3] = LoadFont("resources/fonts/setback.png");
-        fonts[4] = LoadFont("resources/fonts/romulus.png");
-        fonts[5] = LoadFont("resources/fonts/pixantiqua.png");
-        fonts[6] = LoadFont("resources/fonts/alpha_beta.png");
-        fonts[7] = LoadFont("resources/fonts/jupiter_crash.png");
 
         for (int i = 0; i < inventory.size(); i++)
         {
@@ -128,10 +121,15 @@ void InventorySystem::drawInventory() {
                         const char* cw = weight.c_str();
                         DrawTextEx(fonts[0], cw, { 455, 325 }, 20, 1, WHITE);
 
+                        //Show item's unique attributes
+                        string attributes = inventory[index]->getAttributes();
+                        const char* ca = attributes.c_str();
+                        DrawTextEx(fonts[0], ca, { 455, 350 }, 10, 1, WHITE);
+
                         //Show item's description
                         string description = inventory[index]->getDescription();
                         const char* cd = description.c_str();
-                        DrawTextEx(fonts[0], cd, { 455, 350 }, 10, 1, WHITE);
+                        DrawTextEx(fonts[0], cd, { 455, 375 }, 10, 1, WHITE);
 
                         //If left mouse button is held, show using the item.
                         string used = inventory[index]->use();

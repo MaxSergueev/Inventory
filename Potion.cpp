@@ -28,24 +28,17 @@ map<string, int> Potion::getEffects() const {
 }
 
 int Potion::getUses() const {
-    //cout << name << " has " << uses << " uses left." << endl;
-
     return uses;
 }
 
 int Potion::getEfficiency() const {
-    //cout << name << " deals " << efficiency << " points per second per when used." << endl;
-
     return efficiency;
 }
 
 string Potion::use() {
-    /*uses -= 1;
-    cout << "Drank " << name << ". " << uses - 1 << " uses left." << endl;
-    for (auto const& p : effects)
-    {
-        std::cout << p.first << " for " << p.second << " seconds. " << efficiency << " points per second." << '\n';
-    }*/
     return "Drank " + name;
+}
 
+string Potion::getAttributes() {
+    return "This potion has " + to_string(uses) + " uses left. Has an efficiency of " + to_string(efficiency);
 }

@@ -15,7 +15,7 @@ using namespace std;
 
 int main() {
 
-    //Texture2D swordImage = LoadTexture("Images/Weapon & Tool/Silver Sword.png");
+    //Create items for the inventory
     map<string, int> swordEffects = {
         {"durability", 100}
     };
@@ -105,6 +105,8 @@ int main() {
     inventory.populateInventory(&ring);
 
     //inventory.printInventory(); //For debugging
+
+    //Draw inventory
     inventory.drawInventory();
 
     return 0;
