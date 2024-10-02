@@ -41,9 +41,5 @@ public:
 	//Pure virtual function for unique attributes
 	virtual string getAttributes() = 0;
 
-	
-
-
-
 };
 

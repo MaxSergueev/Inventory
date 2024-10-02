@@ -32,12 +32,14 @@ int Tool::getEfficiency() const{
     return efficiency;
 }
 
+// Unique Getters
 string Tool::getFunction() const {
     return name + " is used for " + function;
 }
 
+// Virtual Function
 string Tool::use() {
-    return "You used your " + name + " to " + function + ". It's efficiency is" + to_string(efficiency);
+    return "You used your " + name + " to " + function + ". It's efficiency is " + to_string(efficiency);
 }
 
 string Tool::getAttributes() {

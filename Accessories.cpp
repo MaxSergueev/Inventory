@@ -27,6 +27,7 @@ map<string, int> Accessories::getEffects() const {
     return effects;
 }
 
+// Unique Getters
 string Accessories::getAlignment() const {
     return "Wearing " + name + " increases your alignment towards the " + alignment;
 }
@@ -35,6 +36,7 @@ string Accessories::getSlot() const {
     return name + " is worn in the " + slot + " slot.";
 }
 
+// Virtual functions
 string Accessories::use() {
     return "Equipped: " + name + " to " + slot + " slot. Changing your alignment towards the " + alignment; // can maybe add effects list
 }

@@ -27,6 +27,7 @@ map<string, int> Potion::getEffects() const {
     return effects;
 }
 
+// Unique Getters
 int Potion::getUses() const {
     return uses;
 }
@@ -35,6 +36,8 @@ int Potion::getEfficiency() const {
     return efficiency;
 }
 
+
+// Virtual functions
 string Potion::use() {
     return "Drank " + name;
 }

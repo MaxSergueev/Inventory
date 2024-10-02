@@ -40,6 +40,7 @@ map<string, int> Item::getEffects() const {
     return effects;
 }
 
+// Virtual Function
 string Item::use() {
     return "Using item: " + name;
 }

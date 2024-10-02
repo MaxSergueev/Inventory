@@ -27,6 +27,7 @@ map<string, int> Weapon::getEffects() const {
     return effects;
 }
 
+// Unique Getters
 int Weapon::getDamage() const {
     return damage;
 }
@@ -35,7 +36,7 @@ int Weapon::getRange() const {
     return range;
 }
 
-// Use the weapon
+// Virtual functions
 string Weapon::use() {
     return "Swinging weapon " + name + " dealing " + to_string(damage) + " damage at a range of " + to_string(range);
 }

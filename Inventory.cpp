@@ -104,8 +104,6 @@ int main() {
     inventory.populateInventory(&pickaxe);
     inventory.populateInventory(&ring);
 
-    //inventory.printInventory(); //For debugging
-
     //Draw inventory
     inventory.drawInventory();
 

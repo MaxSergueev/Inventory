@@ -27,6 +27,7 @@ map<string, int> Armor::getEffects() const {
     return effects;
 }
 
+// Unique Getters
 int Armor::getDefense() const {
     cout << "This armor has a physical resistance of " << defense << "." << endl;
     return defense;
@@ -36,9 +37,9 @@ string Armor::getSlot()const {
     return "This armor is worn in the " + slot + " slot.";
 }
 
-// Use the armor
+//Virtual functions
 string Armor::use() {
-    return "Equipped " + name + " to " + slot + " slot. " + "Granting " + to_string(defense) + ".";
+    return "Equipped " + name + " to " + slot + " slot. " + "Granting " + to_string(defense) + " physical defense.";
 
 }
 

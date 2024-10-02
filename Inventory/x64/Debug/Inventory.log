@@ -1,10 +1,1 @@
-﻿  Inventory.cpp
-C:\SDL_GameDev\Inventory\Inventory.cpp(67,9): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\SDL_GameDev\Inventory\Inventory.cpp(79,9): warning C4305: 'argument': truncation from 'double' to 'float'
-  InventorySystem.cpp
-C:\SDL_GameDev\Inventory\InventorySystem.cpp(78,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\SDL_GameDev\Inventory\InventorySystem.cpp(79,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\SDL_GameDev\Inventory\InventorySystem.cpp(92,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\SDL_GameDev\Inventory\InventorySystem.cpp(92,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  Inventory.vcxproj -> C:\SDL_GameDev\Inventory\x64\Debug\Inventory.exe
+﻿  Inventory.vcxproj -> C:\SDL_GameDev\Inventory\x64\Debug\Inventory.exe
