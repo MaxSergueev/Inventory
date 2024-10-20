@@ -1,7 +1,19 @@
-﻿  Armor.cpp
+﻿  Accessories.cpp
+  Armor.cpp
+  Inventory.cpp
+C:\SDL_GameDev\Inventory\Inventory.cpp(67,9): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\SDL_GameDev\Inventory\Inventory.cpp(79,9): warning C4305: 'argument': truncation from 'double' to 'float'
+  InventorySystem.cpp
+C:\SDL_GameDev\Inventory\InventorySystem.cpp(78,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\SDL_GameDev\Inventory\InventorySystem.cpp(79,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\SDL_GameDev\Inventory\InventorySystem.cpp(92,69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\SDL_GameDev\Inventory\InventorySystem.cpp(92,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Item.cpp
+  Potion.cpp
+  Tool.cpp
+  Weapon.cpp
   Generating code
-  1 of 454 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+  All 455 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Inventory.vcxproj -> C:\SDL_GameDev\Inventory\x64\Release\Inventory.exe
